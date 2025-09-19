@@ -95,7 +95,7 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
 
         jLabel7.setText("Perfil");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "admin", "user" }));
 
         jCheckBox1.setText("Altera a senha");
 
