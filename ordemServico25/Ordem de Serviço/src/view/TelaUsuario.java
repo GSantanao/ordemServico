@@ -45,6 +45,11 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Cadastro de Usuarios");
+
         jLabel1.setText("        Id");
 
         jLabel2.setText(" Nome");

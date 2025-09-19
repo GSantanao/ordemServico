@@ -4,6 +4,9 @@
  */
 package view;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author clebe
@@ -26,22 +29,146 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMnCadastro = new javax.swing.JMenu();
+        jMnItemClinete = new javax.swing.JMenuItem();
+        jMnItemServico = new javax.swing.JMenuItem();
+        jMnItemUsuario = new javax.swing.JMenuItem();
+        jMnRelatorio = new javax.swing.JMenu();
+        jMnRelCliente = new javax.swing.JMenuItem();
+        jMnRelServico = new javax.swing.JMenuItem();
+        jMnSobre = new javax.swing.JMenu();
+        jMnSair = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Gestão de Ordem de Serviço");
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 749, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 454, Short.MAX_VALUE)
+        );
+
+        jMnCadastro.setMnemonic('c');
+        jMnCadastro.setText("Cadastro");
+
+        jMnItemClinete.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnItemClinete.setText("Cliente");
+        jMnItemClinete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnItemClineteActionPerformed(evt);
+            }
+        });
+        jMnCadastro.add(jMnItemClinete);
+
+        jMnItemServico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnItemServico.setText("Ordem Serviço");
+        jMnCadastro.add(jMnItemServico);
+
+        jMnItemUsuario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnItemUsuario.setText("Usuário");
+        jMnItemUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnItemUsuarioActionPerformed(evt);
+            }
+        });
+        jMnCadastro.add(jMnItemUsuario);
+
+        jMenuBar1.add(jMnCadastro);
+
+        jMnRelatorio.setMnemonic('r');
+        jMnRelatorio.setText("Relatório");
+
+        jMnRelCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnRelCliente.setText("Clientes");
+        jMnRelatorio.add(jMnRelCliente);
+
+        jMnRelServico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnRelServico.setText("Serviços");
+        jMnRelServico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnRelServicoActionPerformed(evt);
+            }
+        });
+        jMnRelatorio.add(jMnRelServico);
+
+        jMenuBar1.add(jMnRelatorio);
+
+        jMnSobre.setMnemonic('s');
+        jMnSobre.setText("Sobre");
+        jMnSobre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMnSobreMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMnSobre);
+
+        jMnSair.setMnemonic('i');
+        jMnSair.setText("Sair");
+        jMnSair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMnSairMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMnSair);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 172, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 75, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMnItemClineteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnItemClineteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnItemClineteActionPerformed
+
+    private void jMnRelServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnRelServicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnRelServicoActionPerformed
+
+    private void jMnSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMnSairMouseClicked
+
+        int resp;
+        resp = JOptionPane.showConfirmDialog(null, "Deseja sair do sistema?", "Atenção", JOptionPane.YES_NO_OPTION);
+        if(resp == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+
+//add your handling code here:
+    }//GEN-LAST:event_jMnSairMouseClicked
+
+    private void jMnSobreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMnSobreMouseClicked
+        TelaSobre sobre = new TelaSobre();
+        sobre.setVisible(true);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jMnSobreMouseClicked
+
+    private void jMnItemUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnItemUsuarioActionPerformed
+        TelaUsuario usuario = new TelaUsuario();
+        usuario.setVisible(true);
+        jDesktopPane1.add(usuario);
+    }//GEN-LAST:event_jMnItemUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,6 +205,51 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
     }
 
+    static class menRel {
+
+        static void setEnabled(boolean b) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public menRel() {
+        }
+    }
+
+    static class menCadUsu {
+
+        static void setEnabled(boolean b) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public menCadUsu() {
+        }
+    }
+
+    static class lblUsuario {
+
+        static void setText(String string) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        static void setForeground(Color red) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public lblUsuario() {
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMnCadastro;
+    private javax.swing.JMenuItem jMnItemClinete;
+    private javax.swing.JMenuItem jMnItemServico;
+    private javax.swing.JMenuItem jMnItemUsuario;
+    private javax.swing.JMenuItem jMnRelCliente;
+    private javax.swing.JMenuItem jMnRelServico;
+    private javax.swing.JMenu jMnRelatorio;
+    private javax.swing.JMenu jMnSair;
+    private javax.swing.JMenu jMnSobre;
     // End of variables declaration//GEN-END:variables
 }
